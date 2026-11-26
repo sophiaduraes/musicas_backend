@@ -44,8 +44,8 @@ app.get("/musica/:id", (request, response) => {
 app.post("/cadastrar", (request, response) => { 
     const { titulo, artista, genero, ano, duracao } = request.body
 
-   ' const comandoInsert = "INSERT INTO musicas_sophiaduraes(titulo, artista, genero, ano, duracao) VALUES (?, ?, ?, ?, ?)"
-'
+    const comandoInsert = "INSERT INTO musicas_sophiaduraes(titulo, artista, genero, ano, duracao) VALUES (?, ?, ?, ?, ?)"
+
     sql.query(comandoInsert, [titulo, artista, genero, ano, duracao], (error) => { })
      if (error) {
         console.log(error)
@@ -60,7 +60,7 @@ app.post("/cadastrar", (request, response) => {
 app.delete("/apagar/:id", (request, response) => {
     const { id } = request.params
 
-    const comandoSelect = "SELECT * FROM musicas_seunome WHERE id = ?"
+     const comandoSelect = "SELECT * FROM musicas_seunome WHERE id = ?"
 
     const comandoDelete = "DELETE FROM musicas_seunome WHERE id = ?"
 
